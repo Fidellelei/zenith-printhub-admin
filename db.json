@@ -1,33 +1,32 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Business Cards",
       "description": "Premium matte finish cards",
-      "price": 0,
+      "price": 15,
       "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Flyers",
       "description": "High-quality marketing flyers",
       "price": 10,
       "image": "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Vinyl Banner",
       "description": "Outdoor advertising banner",
       "price": 40,
       "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Custom T-Shirts",
       "description": "Branded cotton t-shirts",
       "price": 25,
       "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
