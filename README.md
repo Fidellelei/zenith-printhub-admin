@@ -51,7 +51,7 @@ This project was developed as part of a React summative lab focused on advanced 
 # Complete Project Structure
 
 ```bash
-printing-shop-admin/
+Zenith-PrintHub/
 │
 ├── node_modules/
 │
@@ -264,7 +264,6 @@ Example test coverage:
 - CRUD behavior
 
 # Known Limitations
-
 - JSON Server is a mock backend.
 - Data persistence is local only.
 - Authentication is not implemented.
@@ -298,8 +297,6 @@ Recommended frontend deployment platform:
 # Author
 ## Fidel Lelei
 Zenith PrintHub — React Admin Portal Project
-
----
 
 # License
 This project was created for educational purposes.

@@ -2,7 +2,7 @@ function Home() {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h1>PrintHub Studio Admin Portal</h1>
+        <h1>Zenith PrintHub studio Admin Portal</h1>
 
         <p>
           Manage printing products, pricing, inventory,
