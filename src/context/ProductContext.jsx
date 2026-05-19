@@ -1,46 +1,33 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useState } from "react";
 
-export const ProductContext = createContext()
+export const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      name: "Business Cards",
-      description: "Premium matte cards",
-      price: 15,
-      image:
-        "https://images.unsplash.com/photo-1586953208448-b95a79798f07"
-    },
-    {
-      id: 2,
-      name: "Flyers",
-      description: "Marketing flyers",
-      price: 10,
-      image:
-        "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa"
-    },
-    {
-      id: 3,
-      name: "Vinyl Banner",
-      description: "Outdoor advertising banner",
-      price: 40,
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-    }
-  ])
+  const [products, setProducts] = useState([]);
 
-  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch("http://localhost:3001/products");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+        setProducts([]);
+      }
+    }
+
+    fetchProducts();
+  }, []);
 
   return (
-    <ProductContext.Provider
-      value={{
-        products,
-        setProducts,
-        loading
-      }}
-    >
+    <ProductContext.Provider value={{ products, setProducts }}>
       {children}
     </ProductContext.Provider>
-  )
+  );
 }
