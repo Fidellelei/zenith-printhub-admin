@@ -8,9 +8,7 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch(
-          "https://YOUR-API.onrender.com/products"
-        );
+        const response = await fetch("https://your-render-url.onrender.com/products");
 
         const data = await response.json();
         setProducts(data);
